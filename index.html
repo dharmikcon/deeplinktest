@@ -2,9 +2,18 @@
 <html>
 <head>
   <title>Open App</title>
+  <script>
+    function openAppAndClose() {
+      window.location.href = 'animationapp://open?user=dharmik&id=123';
+      // Try to close the window after a short delay
+      setTimeout(function () {
+        window.close();
+      }, 500);
+    }
+  </script>
 </head>
 <body>
- <button onclick="window.location.href='animationapp://open?user=dharmik&id=123'">Open App</button>
+  <button onclick="openAppAndClose()">Open App</button>
   <p>If the app doesn't open, <a href="animationapp://open?user=dharmik&id=123">click here</a>.</p>
 </body>
 </html>
